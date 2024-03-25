@@ -39,6 +39,10 @@
                 display: inline-block;
             }
 
+            .password-field {
+                padding-right: 30px; /* Aggiungere spazio per l'icona */
+            }
+
             .toggle-password {
                 position: absolute;
                 top: 50%;
@@ -49,27 +53,27 @@
                 background-color: transparent;
             }
         </style>
+
         <div class="password-container">
-            <input type="password" id="passwordField">
+            <input type="password" id="passwordField" class="password-field">
             <button class="toggle-password" onclick="togglePasswordVisibility()">
-                <i class="fa fa-eye"></i> <!-- Font Awesome icon for eye -->
+                <img src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" alt="Show Password">
             </button>
         </div>
 
+        <!--input type="password" id="passwordField">
+        <button onclick="togglePasswordVisibility()">Show Password</button-->
 
-    <!--input type="password" id="passwordField">
-    <button onclick="togglePasswordVisibility()">Show Password</button-->
-
-    <script>
-        function togglePasswordVisibility() {
-            var passwordField = document.getElementById("passwordField");
-            if (passwordField.type === "password") {
-                passwordField.type = "text";
-            } else {
-                passwordField.type = "password";
+        <script>
+            function togglePasswordVisibility() {
+                var passwordField = document.getElementById("passwordField");
+                if (passwordField.type === "password") {
+                    passwordField.type = "text";
+                } else {
+                    passwordField.type = "password";
+                }
             }
-        }
-    </script>
+        </script>
 
     </main>
 
