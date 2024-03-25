@@ -3,19 +3,62 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Password</title>
-
+    <meta charset="utf-8">
+    <link href="./../Static/css/image.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./../Static/css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="./../Static/css/table.css" rel="stylesheet" type="text/css" media="screen">
+    <title> Prova (generic) </title>
 </head>
 
 <body>
+    <header>
 
-    <h1>hello world</h1>
+        <h1 class="title">Prove (generic)</h1>
 
-    <input type="password" id="passwordField">
-    <button onclick="togglePasswordVisibility()">Show Password</button>
+        <br />
+
+        <ul>
+            <li><a href="./../">Home</a></li>
+            <li><a href="./../about">About</a></li>
+            <li><a href="./../projects/">Projects</a></li>
+            <li><a href="./../utilities/">Utilities</a></li>
+            <li><a href="./../generic/">Other</a></li>
+        </ul>
+
+    </header>
+
+    <hr />
+
+    <main>
+
+        <h1>hello world</h1>
+
+        <style>
+            .password-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            .toggle-password {
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+                cursor: pointer;
+                border: none;
+                background-color: transparent;
+            }
+        </style>
+        <div class="password-container">
+            <input type="password" id="passwordField">
+            <button class="toggle-password" onclick="togglePasswordVisibility()">
+                <i class="fa fa-eye"></i> <!-- Font Awesome icon for eye -->
+            </button>
+        </div>
+
+
+    <!--input type="password" id="passwordField">
+    <button onclick="togglePasswordVisibility()">Show Password</button-->
 
     <script>
         function togglePasswordVisibility() {
@@ -27,6 +70,8 @@
             }
         }
     </script>
+
+    </main>
 
 </body>
 
