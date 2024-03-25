@@ -1,1 +1,33 @@
-<h1> Hello world </h1>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+
+</head>
+
+<body>
+
+    <h1>hello world</h1>
+
+    <input type="password" id="passwordField">
+    <button onclick="togglePasswordVisibility()">Show Password</button>
+
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("passwordField");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
